@@ -12,12 +12,4 @@ const authorSchema = mongoose.Schema({
   },
 });
 
-// const mySchema = mongoose.Schema({
-//   name: {
-//     type: Number,
-//     required: true,
-//   },
-// });
-
 module.exports = mongoose.model("Author", authorSchema); //Author is the name of the Table inside our database
-// module.exports = mongoose.model("myTable", mySchema); //Author is the name of the Table inside our database

@@ -1,6 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const Author = require("../models/author");
+// const MySchema = require("../models/author");
 
 // All authors Route
 router.get("/", async (req, res) => {
@@ -9,7 +10,7 @@ router.get("/", async (req, res) => {
     searchOptions.name = new RegExp(req.query.name, "i");
   }
   try {
-    const authors = await Author.find(searchOptions);
+    const authors = await Author.find(searchOptions.name);
     res.render("authors/index", {
       authors: authors,
       searchOptions: req.query,

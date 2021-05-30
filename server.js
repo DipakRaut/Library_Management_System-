@@ -6,6 +6,8 @@ const app = express();
 const expressLayouts = require("express-ejs-layouts");
 const indexRouter = require("./routes/index");
 const authorRouter = require("./routes/authors");
+const bookRouter = require("./routes/books");
+
 const bodyParser = require("body-parser"); //it makes easy to access the different input elements from our actual server
 
 const mongoose = require("mongoose");
@@ -27,6 +29,7 @@ db.on("error", (error) => console.error(error));
 db.once("open", () => console.log("Connected to the Database...."));
 
 app.use("/", indexRouter);
-app.use("/authors", authorRouter); // this authors from routes authors
+app.use("/authors", authorRouter); // this authors from routes authors and routes from authorRouter will appended to the /authors/here
+app.use("/books", bookRouter);
 
 app.listen(process.env.PORT || 3000);
