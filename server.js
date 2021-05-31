@@ -7,6 +7,7 @@ const expressLayouts = require("express-ejs-layouts");
 const indexRouter = require("./routes/index");
 const authorRouter = require("./routes/authors");
 const bookRouter = require("./routes/books");
+const methodOverride = require("method-override");
 
 const bodyParser = require("body-parser"); //it makes easy to access the different input elements from our actual server
 
@@ -18,6 +19,7 @@ app.set("layout", "layouts/layout");
 app.use(expressLayouts);
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ limit: "10mb", extended: false }));
+app.use(methodOverride("_method"));
 
 mongoose.connect(process.env.DATABASE_URL, {
   useNewUrlParser: true,
