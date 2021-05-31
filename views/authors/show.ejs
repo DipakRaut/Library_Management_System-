@@ -5,5 +5,7 @@
 <%if(bookByAuthor.length > 0){ %>
 <h2>Books By Authors</h2>
 <% bookByAuthor.forEach(items => { %>
-<img height="180" width="150" src="<%= items.coverImagePath %> " />
+<a href="/books/<%= items.id %> ">
+  <img height="180" width="150" src="<%= items.coverImagePath %> " />
+</a>
 <%}) %> <% } %>
