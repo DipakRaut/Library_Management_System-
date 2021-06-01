@@ -1,9 +1,12 @@
-<h2>Recently Added Page</h2>
+<h2 class="page-header">Recently Added Books 📖</h2>
 
-<div>
-  <% books.forEach(items => { %>
-  <a href="/books/<%= items.id %> ">
-    <img height="150" width="150" src="<%= items.coverImagePath %> " />
-  </a>
-  <%}); %>
-</div>
+<% books.forEach(items => { %>
+<a href="/books/<%= items.id %> ">
+  <img
+    height="300"
+    width="260"
+    style="margin: 10px"
+    src="<%= items.coverImagePath %> "
+  />
+</a>
+<%}); %>

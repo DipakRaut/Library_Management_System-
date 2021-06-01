@@ -27,11 +27,16 @@
     ></script>
     <script defer src="https://unpkg.com/filepond/dist/filepond.js"></script>
     <script defer src="/javascripts/fileUpload.js"></script>
-    <title>L.Management</title>
+    <link rel="stylesheet" href="/stylesheets/main.css" />
+    <title>Library</title>
   </head>
-  <body>
-    Before <%-include("../partials/header.ejs") %>
-    <%-include("../partials/errorMessage.ejs") %> <%- body %> After
+  <body style="background-color: rgb(72, 238, 238)">
+    <div class="container">
+      <%-include("../partials/header.ejs") %>
+      <div class="inner-container">
+        <%-include("../partials/errorMessage.ejs") %> <%- body %>
+      </div>
+    </div>
   </body>
 </html>
 <!--  defer means it ran after the page gets done loading -->

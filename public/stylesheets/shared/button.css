@@ -1,0 +1,43 @@
+.btn {
+  border: 1px solid pink;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  font-size: 1.2rem;
+  font-family: "Gotham Rounded";
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+}
+
+.btn-primary {
+  color: dodgerblue;
+  background-color: white;
+}
+
+.btn-primary:hover {
+  color: pink;
+  background-color: rgb(230, 39, 204);
+}
+
+.btn-danger {
+  color: rgb(253, 253, 253);
+  background-color: rgb(226, 36, 36);
+}
+
+.btn-danger:hover {
+  color: rosybrown;
+  background-color: rgb(230, 226, 25);
+}
+
+.btn-row {
+  display: flex;
+  align-items: flex-start;
+}
+
+.btn-row > * {
+  margin-left: 1rem;
+}
+
+.btn-row > *:first-child {
+  margin-left: 0;
+}
